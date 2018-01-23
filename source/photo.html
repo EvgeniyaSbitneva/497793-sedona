@@ -13,22 +13,22 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="index.html">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
-          <li class="main-nav__item main-nav__item--current
-
-          ">
-            <a>Фото и видео</a>
+          <li class="main-nav__item main-nav__item--current">
+            <a class="main-nav__link">Фото и видео</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">Форма отзыва</a>
+            <a class="main-nav__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="main-nav__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">HTML academy</a>
+            <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML academy</a>
           </li>
         </ul>
       </nav>
-      <img class="page-header__logo" src="http://via.placeholder.com/110x83" width="110" height="83" alt="Логотип Седона">
+      <a class="page-header__logo" href="index.html">
+        <img src="http://via.placeholder.com/110x83" width="110" height="83" alt="Логотип Седона">
+      </a>
       <figure class="page-header__banner page-header__banner--page">
         <img class="page-header__slogan" src="http://via.placeholder.com/229x39" width="229" height="39" alt="Sedona">
       </figure>
@@ -38,51 +38,51 @@
         <h1 class="lead__caption">Фото и видео</h1>
         <p class="lead__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
       </div>
-      <section class="galery">
-        <ul class="galery__list">
-          <li class="galery__item">
-            <a class="galery__img" href="#">
+      <section class="gallery">
+        <ul class="gallery__list">
+          <li class="gallery__item photo-card">
+            <a class="photo-card__img" href="#">
               <img src="http://via.placeholder.com/280x280" width="280" height="280" alt="Неродные просторы">
             </a>
-            <b class="galery__caption">Неродные просторы</b>
-            <p class="galery__autor">Автор фото: Борис</p>
-            <button class="galery__btn like-btn">
+            <b class="photo-card__caption">Неродные просторы</b>
+            <p class="photo-card__autor">Автор фото: Борис</p>
+            <a class="photo-card__btn like-btn" href="#">
               <span class="like-btn__icon"></span>
-              <span class="like-btn__counter"></span>
-            </button>
+              <span class="like-btn__counter">1350</span>
+            </a>
           </li>
-          <li class="galery__item">
-            <a class="galery__img" href="#">
+          <li class="gallery__item photo-card">
+            <a class="photo-card__img" href="#">
               <img src="http://via.placeholder.com/280x280" width="280" height="280" alt="Местная растительность">
             </a>
-            <b class="galery__caption">Местная растительность</b>
-            <p class="galery__autor">Автор фото: Сергей</p>
-            <button class="galery__btn like-btn">
+            <b class="photo-card__caption">Местная растительность</b>
+            <p class="photo-card__autor">Автор фото: Сергей</p>
+            <a class="photo-card__btn like-btn" href="#">
               <span class="like-btn__icon"></span>
-              <span class="like-btn__counter"></span>
-            </button>
+              <span class="like-btn__counter">143</span>
+            </a>
           </li>
-          <li class="galery__item">
-            <a class="galery__img" href="#">
+          <li class="gallery__item photo-card">
+            <a class="photo-card__img" href="#">
               <img src="http://via.placeholder.com/280x280" width="280" height="280" alt="Дорога на север">
             </a>
-            <b class="galery__caption">Дорога на север</b>
-            <p class="galery__autor">Автор фото: Пётр</p>
-            <button class="galery__btn like-btn">
+            <b class="photo-card__caption">Дорога на север</b>
+            <p class="photo-card__autor">Автор фото: Пётр</p>
+            <a class="photo-card__btn like-btn" href="#">
               <span class="like-btn__icon"></span>
-              <span class="like-btn__counter"></span>
-            </button>
+              <span class="like-btn__counter">96</span>
+            </a>
           </li>
-          <li class="galery__item">
-            <a class="galery__img" href="#">
+          <li class="gallery__item photo-card">
+            <a class="photo-card__img" href="#">
               <img src="http://via.placeholder.com/280x280" width="280" height="280" alt="Мост дьявола">
             </a>
-            <b class="galery__caption">Мост дьявола</b>
-            <p class="galery__autor">Автор фото: Антон</p>
-            <button class="galery__btn like-btn">
+            <b class="photo-card__caption">Мост дьявола</b>
+            <p class="photo-card__autor">Автор фото: Антон</p>
+            <a class="photo-card__btn like-btn" href="#">
               <span class="like-btn__icon"></span>
-              <span class="like-btn__counter"></span>
-            </button>
+              <span class="like-btn__counter">254</span>
+            </a>
           </li>
         </ul>
       </section>
@@ -111,17 +111,17 @@
       <section class="social">
         <b class="social__tag">#visitsedona</b>
         <ul class="social__list">
-          <li class="social__item">
+          <li class="social__item social__item--tw">
             <a href="#">
               <span class="visually-hidden">Твиттер</span>
             </a>
           </li>
-          <li class="social__item">
+          <li class="social__item social__item--fb">
             <a href="#">
               <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
-          <li class="social__item">
+          <li class="social__item social__item--youtube">
             <a href="#">
               <span class="visually-hidden">Ютьюб</span>
             </a>

@@ -43,14 +43,29 @@
   line-height: 26px;
 }
 
+.testimonial-form__group--name {
+  display: block;
+}
+
 .testimonial-form__label--name {
-  min-width: 0;
-  flex-basis: 80px;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 80px;
+
+  &:first-of-type {
+    width: 40px;
+  }
 }
 
 .testimonial-form__label--name + input {
-  min-width: 0;
-  flex-basis: 190px;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 190px;
+  margin-bottom: 20px;
+
+  &:first-of-type {
+    width: 230px;
+  }
 }
 
 .testimonial-form__legend,

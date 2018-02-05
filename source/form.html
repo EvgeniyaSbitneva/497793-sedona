@@ -19,29 +19,27 @@
           <li class="main-nav__item">
             <a class="main-nav__link" href="photo.html">Фото и видео</a>
           </li>
-          <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__link">Форма отзыва</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--current">Форма отзыва</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML academy</a>
           </li>
         </ul>
+        <a class="main-nav__logo" href="index.html">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип Седона">
+        </a>
       </nav>
-      <a class="page-header__logo" href="index.html">
-        <img src="img/logo-sedona-mobile.svg" width="110" height="83" alt="Логотип Седона">
-      </a>
-      <div class="page-header__wrap">
-        <figure class="page-header__banner page-header__banner--page">
-          <img class="page-header__slogan" src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
-      </div>
+      <figure class="page-header__banner page-header__banner--page">
+        <img class="page-header__slogan" src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
       </figure>
     </header>
     <main class="page-main">
-      <div class="lead center-wrap">
+      <div class="lead">
         <h1 class="lead__caption">Оставьте свой отзыв</h1>
         <p class="lead__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </div>
-      <form class="testimonial-form center-wrap" method="post" action="https://echo.htmlacademy.ru">
+      <form class="testimonial-form" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="testimonial-form__group">
           <legend class="testimonial-form__legend">Представьтесь:</legend>
           <label class="testimonial-form__label testimonial-form__label--name" for="first-name">Имя<sup>*</sup>:</label>
@@ -65,7 +63,7 @@
           <input type="radio" name="filling" value="negative" id="radio-negative">
           <label class="testimonial-form__label testimonial-form__label--radio" for="radio-negative">Скорее отрицательное</label>
           <input type="radio" name="filling" value="no-answer" id="radio-no-answer">
-          <label class="testimonial-form__label testimonial-form__label--radio" for="no-answer">Затрудняюсь ответить</label>
+          <label class="testimonial-form__label testimonial-form__label--radio" for="radio-no-answer">Затрудняюсь ответить</label>
         </fieldset>
         <fieldset class="testimonial-form__group">
           <legend class="testimonial-form__legend">Посещенные достопримечательности:</legend>
@@ -82,7 +80,10 @@
           <label class="testimonial-form__label testimonial-form__label--textarea" for="message-area">Опишите свои эмоции:</label>
           <textarea name="message" rows="5" placeholder="Опишите подробно все свои восторги" id="message-area"></textarea>
         </fieldset>
-        <button class="testimonial-form__button btn" type="submit">Отправить отзыв</button>
+        <div class="testimonial-form__btn-wrap">
+          <button class="testimonial-form__button btn" type="submit">Отправить отзыв</button>
+          <span class="testimonial-form__note">* — обязательные поля</span>
+        </div>
       </form>
     </main>
     <footer class="page-footer">

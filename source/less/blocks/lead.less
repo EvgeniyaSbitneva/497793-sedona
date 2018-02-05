@@ -1,3 +1,8 @@
+.lead {
+  .mobile-center();
+  padding: 0 20px;
+}
+
 .lead__caption {
   display: block;
 
@@ -16,4 +21,20 @@
   margin-bottom: 30px;
 
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .lead {
+    margin: 0 auto;
+    padding: 70px 0;
+    width: 450px;
+  }
+
+  .lead__caption {
+    font-size: 30px;
+  }
+
+  .lead__text {
+    margin-bottom: 0;
+  }
 }

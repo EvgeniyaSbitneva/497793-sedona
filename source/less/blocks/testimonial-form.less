@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
   .reset-indents();
   width: 100%;
   padding: 20px 0 25px;
@@ -77,6 +78,17 @@
   text-align: center;
 }
 
+.testimonial-form__label--radio,
+.testimonial-form__label--checkbox {
+  padding: 15px 0 15px 80px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: @heading-dark;
+  text-transform: none;
+}
+
 .testimonial-form__note {
   display: none;
 }
@@ -90,21 +102,52 @@
     padding: 0 60px;
   }
 
-  .testimonial-form__group {
-    &:nth-child(3) {
-      order: -1;
+  .testimonial-form__legend {
+    font-size: 21px;
+  }
 
-      width: 324px;
-    }
+  .testimonial-form__group--radio {
+    order: -1;
 
-    &:first-child {
-      width: 324px;
+    width: 324px;
+
+    .testimonial-form__legend {
+      text-align: left;
     }
   }
 
-  .testimonial-form__note {
-    flex-shrink: 0;
+  .testimonial-form__group--name {
+    width: 324px;
+    padding-left: 58px;
 
+    .testimonial-form__legend {
+      text-align: left;
+    }
+  }
+
+  .testimonial-form__label--name + input {
+    width: 178px;
+
+    &:first-of-type {
+      width: 216px;
+    }
+  }
+
+  .testimonial-form__label--contacts + input {
+    width: 100%;
+  }
+
+  .testimonial-form__group--checkbox {
+    .reset-indents();
+    width: 480px;
+    margin: 0 auto;
+  }
+
+  .testimonial-form__label--checkbox {
+    width: 210px;
+  }
+
+  .testimonial-form__note {
     display: block;
   }
 
@@ -119,5 +162,37 @@
   .testimonial-form__button {
     margin: 0;
     width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .testimonial-form {
+    .desktop-center();
+    padding: 0 120px;
+  }
+
+  .testimonial-form__group--name,
+  .testimonial-form__group--radio {
+    width: 400px;
+  }
+
+  .testimonial-form__group--name {
+    margin-left: 160px;
+    padding-left: 0;
+
+    input {
+      width: 312px;
+
+      &:first-of-type {
+        width: 350px;
+      }
+    }
+  }
+
+  .testimonial-form__group--checkbox {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
   }
 }

@@ -51,32 +51,38 @@
         </fieldset>
         <fieldset class="testimonial-form__group testimonial-form__group--contacts">
           <legend class="testimonial-form__legend">Контактная информация:</legend>
-          <label class="testimonial-form__label testimonial-form__label--contacts" for="user-phone">Контактный телефон<sup>*</sup>:</label>
-          <input type="tel" name="user-phone" placeholder="Введите телефон" id="user-phone" required>
-          <label class="testimonial-form__label testimonial-form__label--contacts" for="user-email">Электронная почта<sup>*</sup>:</label>
-          <input type="email" name="user-email" placeholder="Введите e-mail" id="user-email" required>
+          <div class="testimonial-form__flex-wrap testimonial-form__flex-wrap--row">
+            <label class="testimonial-form__label testimonial-form__label--contacts" for="user-phone"><span class="testimonial-form__desk-hidden">Контактный</span> телефон<sup>*</sup>:</label>
+            <input type="tel" name="user-phone" placeholder="Введите телефон" id="user-phone" required>
+            <label class="testimonial-form__label testimonial-form__label--contacts" for="user-email">Электронная почта<sup>*</sup>:</label>
+            <input type="email" name="user-email" placeholder="Введите e-mail" id="user-email" required>
+          </div>
         </fieldset>
         <fieldset class="testimonial-form__group testimonial-form__group--radio">
           <legend class="testimonial-form__legend">Ваше общее впечатление:</legend>
-          <input class="visually-hidden" type="radio" name="filling" value="positive" id="radio-positive" checked>
-          <label class="testimonial-form__label testimonial-form__label--radio" for="radio-positive">Скорее положительное</label>
-          <input class="visually-hidden" type="radio" name="filling" value="negative" id="radio-negative">
-          <label class="testimonial-form__label testimonial-form__label--radio" for="radio-negative">Скорее отрицательное</label>
-          <input class="visually-hidden" type="radio" name="filling" value="no-answer" id="radio-no-answer">
-          <label class="testimonial-form__label testimonial-form__label--radio" for="radio-no-answer">Затрудняюсь ответить</label>
+          <div class="testimonial-form__flex-wrap">
+            <input class="visually-hidden" type="radio" name="filling" value="positive" id="radio-positive" checked>
+            <label class="testimonial-form__label testimonial-form__label--radio" for="radio-positive">Скорее положительное</label>
+            <input class="visually-hidden" type="radio" name="filling" value="negative" id="radio-negative">
+            <label class="testimonial-form__label testimonial-form__label--radio" for="radio-negative">Скорее отрицательное</label>
+            <input class="visually-hidden" type="radio" name="filling" value="no-answer" id="radio-no-answer">
+            <label class="testimonial-form__label testimonial-form__label--radio" for="radio-no-answer">Затрудняюсь ответить</label>
+          </div>
         </fieldset>
         <fieldset class="testimonial-form__group testimonial-form__group--checkbox">
           <legend class="testimonial-form__legend">Посещенные достопримечательности:</legend>
-          <input class="visually-hidden" type="checkbox" name="attractions" value="bridge" id="checkbox-bridge" checked>
-          <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-bridge">Мост Дьявола</label>
-          <input class="visually-hidden" type="checkbox" name="attractions" value="park" id="checkbox-park" checked>
-          <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-park">Слайд-парк</label>
-          <input class="visually-hidden" type="checkbox" name="attractions" value="mountain" id="checkbox-mountain">
-          <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-mountain">Гора-Колокол</label>
-          <input class="visually-hidden" type="checkbox" name="attractions" value="red-rocks" id="checkbox-red-rocks" checked>
-          <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-red-rocks">Красные скалы</label>
+          <div class="testimonial-form__flex-wrap testimonial-form__flex-wrap--row">
+            <input class="visually-hidden" type="checkbox" name="attractions" value="bridge" id="checkbox-bridge" checked>
+            <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-bridge">Мост Дьявола</label>
+            <input class="visually-hidden" type="checkbox" name="attractions" value="park" id="checkbox-park" checked>
+            <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-park">Слайд-парк</label>
+            <input class="visually-hidden" type="checkbox" name="attractions" value="mountain" id="checkbox-mountain">
+            <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-mountain">Гора-Колокол</label>
+            <input class="visually-hidden" type="checkbox" name="attractions" value="red-rocks" id="checkbox-red-rocks" checked>
+            <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-red-rocks">Красные скалы</label>
+          </div>
         </fieldset>
-        <fieldset class="testimonial-form__group">
+        <fieldset class="testimonial-form__group testimonial-form__group--textarea">
           <label class="testimonial-form__label testimonial-form__label--textarea" for="message-area">Опишите свои эмоции:</label>
           <textarea name="message" rows="5" placeholder="Опишите подробно все свои восторги" id="message-area"></textarea>
         </fieldset>

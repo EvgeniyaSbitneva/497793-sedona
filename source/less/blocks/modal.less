@@ -1,9 +1,23 @@
 .modal {
-  width: 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+  width: 320px;
+
+  background-color: #ffffff;
 
   &--ok {
     .lead__text {
       margin-bottom: 40px;
+    }
+  }
+
+  &--fail {
+    .lead__text {
+      margin-bottom: 30px;
     }
   }
 }
@@ -24,7 +38,39 @@
 }
 
 .modal__btn-wrap {
+  width: 100%;
   padding: 20px;
 
   background-color: @bg-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .modal--ok {
+    width: 640px;
+
+    .modal__lead {
+      width: 420px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .modal--fail {
+    width: 400px;
+
+    .modal__lead {
+      width: 280px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .modal__btn--fail {
+    width: 272px;
+  }
+
+  .modal__btn-wrap {
+    padding-left: 91px;
+    padding-right: 91px;
+  }
 }

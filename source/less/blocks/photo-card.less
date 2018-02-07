@@ -2,13 +2,11 @@
   margin: 0 auto;
   padding: 20px 0;
 
-  width: 280px;
-
   text-align: left;
 }
 
 .photo-card__img,
-.photo-card__img a {
+.photo-card__img img {
   display: block;
 }
 
@@ -22,4 +20,26 @@
   .reset-indents();
 
   text-transform: none;
+}
+
+@media (min-width: @tablet-width) {
+  .photo-card {
+    .reset-indents();
+  }
+
+  .photo-card__img img {
+    width: 100%;
+  }
+
+  .photo-card__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+  }
+
+  .photo-card__caption {
+    .reset-indents();
+  }
 }

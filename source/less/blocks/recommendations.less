@@ -1,4 +1,6 @@
 .recommendations {
+  order: -1;
+
   .mobile-center();
   padding: 25px 20px 20px;
 }
@@ -18,4 +20,42 @@
 .recommendations__text {
   .reset-indents();
   margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .recommendations {
+    .tablet-center();
+    padding: 0;
+  }
+
+  .recommendations__list {
+    display: flex;
+
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .recommendations__item {
+    display: flex;
+    flex-direction: column;
+
+    padding: 50px 45px;
+    width: 256px;
+
+    &:nth-child(2) {
+      order: 2;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .recommendations {
+    .desktop-center();
+    padding: 0;
+  }
+
+  .recommendations__item {
+    width: 400px;
+  }
 }

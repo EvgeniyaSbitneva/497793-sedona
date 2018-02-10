@@ -2,7 +2,7 @@
   order: -1;
 
   .mobile-center();
-  padding: 25px 20px 20px;
+  padding: 24px 20px 10px;
 }
 
 .recommendations__list {
@@ -12,14 +12,53 @@
   text-align: left;
 }
 
+.recommendations__item {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -12px;
+    left: -50px;
+
+    width: 39px;
+    height: 37px;
+
+    background: url("../../img/icon-house.svg") center no-repeat;
+    background-size: contain;
+  }
+
+  &--souvenirs::before {
+    left: -46px;
+
+    width: 32px;
+    height: 38px;
+
+    background: url(../../img/icon-gift.svg) center no-repeat;
+    background-size: contain;
+  }
+
+  &--food::before {
+    top: -5px;
+
+    width: 40px;
+    height: 35px;
+
+    background: url("../../img/icon-burger.svg") center no-repeat;
+    background-size: contain;
+  }
+}
+
 .recommendations__heading {
-  margin-top: 14px;
-  margin-bottom: 18px;
+  margin: 13px 0;
 }
 
 .recommendations__text {
   .reset-indents();
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+
+  line-height: 21px;
 }
 
 @media (min-width: @tablet-width) {

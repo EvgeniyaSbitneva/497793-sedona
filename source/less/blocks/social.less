@@ -68,6 +68,10 @@
     background-color: @bg-blue-hover;
   }
 
+  &:focus {
+    border: 1px solid yellow;
+  }
+
   &:active {
     background-color: @bg-blue-active;
 
@@ -81,7 +85,7 @@
   .social {
     flex-direction: row;
 
-    width: 66.6%;
+    width: 452px;
     margin: 0;
     padding: 0;
   }
@@ -92,5 +96,17 @@
 
   .social__tag {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social {
+    justify-content: space-around;
+
+    width: 800px;
+  }
+
+  .social__list {
+    margin-right: 0;
   }
 }

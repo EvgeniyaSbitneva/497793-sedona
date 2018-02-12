@@ -41,7 +41,7 @@
       </div>
       <form class="testimonial-form" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="testimonial-form__group testimonial-form__group--name">
-          <legend class="testimonial-form__legend">Представьтесь:</legend>
+          <div class="testimonial-form__legend testimonial-form__legend--name">Представьтесь:</div>
           <label class="testimonial-form__label testimonial-form__label--name" for="first-name">Имя<sup>*</sup>:</label>
           <input type="text" name="first-name" placeholder="Петр" id="first-name" required>
           <label class="testimonial-form__label testimonial-form__label--name" for="surname">Фамилия<sup>*</sup>:</label>
@@ -50,16 +50,20 @@
           <input type="text" name="patronymic" placeholder="Александрович" id="patronymic">
         </fieldset>
         <fieldset class="testimonial-form__group testimonial-form__group--contacts">
-          <legend class="testimonial-form__legend">Контактная информация:</legend>
+          <div class="testimonial-form__legend testimonial-form__legend--contacts">Контактная информация:</div>
           <div class="testimonial-form__flex-wrap testimonial-form__flex-wrap--row">
             <label class="testimonial-form__label testimonial-form__label--contacts" for="user-phone"><span class="testimonial-form__desk-hidden">Контактный</span> телефон<sup>*</sup>:</label>
-            <input type="tel" name="user-phone" placeholder="Введите телефон" id="user-phone" required>
+            <div class="testimonial-form__input--contacts testimonial-form__input--contacts-tel">
+              <input type="tel" name="user-phone" placeholder="Введите телефон" id="user-phone" required>
+            </div>
             <label class="testimonial-form__label testimonial-form__label--contacts" for="user-email">Электронная почта<sup>*</sup>:</label>
-            <input type="email" name="user-email" placeholder="Введите e-mail" id="user-email" required>
+            <div class="testimonial-form__input--contacts testimonial-form__input--contacts-mail">
+              <input type="email" name="user-email" placeholder="Введите e-mail" id="user-email" required>
+            </div>
           </div>
         </fieldset>
         <fieldset class="testimonial-form__group testimonial-form__group--radio">
-          <legend class="testimonial-form__legend">Ваше общее впечатление:</legend>
+          <div class="testimonial-form__legend testimonial-form__legend--radio">кВаше общее впечатление:</div>
           <div class="testimonial-form__flex-wrap">
             <input class="visually-hidden testimonial-form__input--radio" type="radio" name="filling" value="positive" id="radio-positive" checked>
             <label class="testimonial-form__label testimonial-form__label--radio" for="radio-positive">Скорее положительное</label>
@@ -70,7 +74,7 @@
           </div>
         </fieldset>
         <fieldset class="testimonial-form__group testimonial-form__group--checkbox">
-          <legend class="testimonial-form__legend testimonial-form__legend--checkbox">Посещенные <br>достопримечательности:</legend>
+          <div class="testimonial-form__legend testimonial-form__legend--checkbox">Посещенные <br>достопримечательности:</div>
           <div class="testimonial-form__flex-wrap testimonial-form__flex-wrap--row">
             <input class="visually-hidden testimonial-form__input--checkbox" type="checkbox" name="bridge" value="bridge" id="checkbox-bridge" checked>
             <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-bridge">Мост Дьявола</label>
@@ -122,7 +126,7 @@
         </a>
       </section>
     </footer>
-    <!-- <section class="modal modal--fail">
+    <section class="modal modal--fail">
       <div class="modal__lead lead">
         <b class="lead__caption">Что-то пошло не так!</b>
         <p class="lead__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
@@ -137,7 +141,7 @@
       <div class="modal__btn-wrap">
         <button class="modal__btn modal__btn--ok btn" type="button">Закрыть окно</button>
       </div>
-    </section> -->
+    </section>
     <script src="js/main-nav--mobile.js"></script>
   </body>
 </html>

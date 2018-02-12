@@ -18,7 +18,7 @@
   input[type="tel"],
   input[type="email"],
   textarea {
-    padding: 13px 18px 12px;
+    padding: 13px 17px 12px;
 
     font-weight: bold;
     font-size: 18px;
@@ -61,24 +61,66 @@
   }
 }
 
+.testimonial-form__group--contacts {
+  input[type="tel"],
+  input[type="email"] {
+    width: 100%;
+    padding-right: 65px;
+  }
+}
+
+.testimonial-form__label--contacts {
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.testimonial-form__input--contacts {
+  position: relative;
+
+  margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 58px;
+    height: 55px;
+  }
+}
+
+.testimonial-form__input--contacts-tel::after {
+  background: #e6e6e6 url("../img/icon-phone.svg") center no-repeat;
+}
+
+.testimonial-form__input--contacts-mail::after {
+  background: #e6e6e6 url("../img/icon-mail.svg") center no-repeat;
+}
+
 .testimonial-form__label--name + input {
   display: inline-block;
   vertical-align: baseline;
   width: 190px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   &:first-of-type {
     width: 230px;
   }
 
   &:last-of-type {
-    margin-bottom: 0;
+    margin-bottom: 25px;
   }
 }
 
 .testimonial-form__legend,
 .testimonial-form__label--textarea {
-  margin-top: 20px;
+  margin-top: 18px;
   margin-bottom: 20px;
 
   font-weight: bold;
@@ -89,7 +131,7 @@
 }
 
 .testimonial-form__label--name + input::placeholder,
-.testimonial-form__label--contacts + input::placeholder,
+.testimonial-form__input--contacts input::placeholder,
 .testimonial-form__label--textarea + textarea::placeholder {
   font: inherit;
   font-weight: bold;
@@ -99,14 +141,14 @@
 }
 
 .testimonial-form__label--name + input:hover,
-.testimonial-form__label--contacts + input:hover,
+.testimonial-form__input--contacts input:hover,
 .testimonial-form__label--textarea + textarea:hover {
   background-color: @bg-form-hover;
   border-color: @bg-form-hover;
 }
 
 .testimonial-form__label--name + input:focus,
-.testimonial-form__label--contacts + input:focus,
+.testimonial-form__input--contacts input:focus,
 .testimonial-form__label--textarea + textarea:focus {
   outline: none;
   background-color: transparent;
@@ -126,8 +168,8 @@
 
   cursor: pointer;
 
-  :last-of-type {
-    margin-bottom: 0;
+  &:last-of-type {
+    margin-bottom: 25px;
   }
 }
 
@@ -179,6 +221,8 @@
 }
 
 .testimonial-form__label--checkbox {
+  margin-bottom: 25px;
+
   &::before {
     content: "";
 
@@ -230,8 +274,8 @@
 }
 
 .testimonial-form__btn-wrap {
-  margin-top: 25px;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
 .testimonial-form__note,
@@ -280,8 +324,14 @@
     padding: 0 60px;
   }
 
-  .testimonial-form__legend {
+  .testimonial-form__legend,
+  .testimonial-form__label--textarea {
     font-size: 21px;
+  }
+
+  .testimonial-form__legend--radio,
+  .testimonial-form__legend--name {
+    margin-bottom: 60px;
   }
 
   .testimonial-form__flex-wrap--row {
@@ -305,6 +355,8 @@
   }
 
   .testimonial-form__group--name {
+    position: relative;
+
     width: 324px;
     padding-left: 58px;
 
@@ -319,25 +371,114 @@
         width: 216px;
       }
     }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 21px;
+      left: 0;
+
+      width: 1px;
+      height: 292px;
+
+      background-color: @bg-form-active;
+    }
   }
 
   .testimonial-form__group--contacts {
-    margin-top: 45px;
+    margin-top: 32px;
   }
 
-  .testimonial-form__label--contacts + input {
+  .testimonial-form__legend--contacts {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 125px;
+      height: 1px;
+
+      background-color: @bg-form-active;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 125px;
+      height: 1px;
+
+      background-color: @bg-form-active;
+    }
+  }
+
+  .testimonial-form__legend--checkbox {
+    position: relative;
+
+    margin-bottom: 40px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: -80px;
+
+      width: 125px;
+      height: 1px;
+
+      background-color: @bg-form-active;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      right: -80px;
+
+      width: 125px;
+      height: 1px;
+
+      background-color: @bg-form-active;
+    }
+  }
+
+  .testimonial-form__input--contacts {
     width: 100%;
+    margin-bottom: 18px;
   }
 
   .testimonial-form__group--checkbox {
     .reset-indents();
-    width: 480px;
-    margin: 25px auto 0;
+    width: 648px;
+    margin: 10px auto 0;
+    padding: 0 90px;
   }
 
   .testimonial-form__label--checkbox {
-    width: 210px;
+    width: auto;
     margin-bottom: 30px;
+
+    &:nth-of-type(odd) {
+      margin-right: 70px;
+    }
+  }
+
+  .testimonial-form__group--textarea {
+    margin-top: 25px;
+  }
+
+  .testimonial-form__label--textarea {
+    margin-bottom: 55px;
   }
 
   .testimonial-form__note,
@@ -351,6 +492,8 @@
     align-items: center;
 
     width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   .testimonial-form__button {
@@ -382,23 +525,63 @@
     }
   }
 
+  .testimonial-form__legend--radio {
+    padding-left: 80px;
+  }
+
   .testimonial-form__group--checkbox {
     width: 100%;
   }
 
+  .testimonial-form__legend--contacts {
+    margin-top: 12px;
+    margin-bottom: 75px;
+  }
+
   .testimonial-form__label--contacts {
     margin-right: 20px;
+    padding-left: 0;
 
     &:nth-of-type(even) {
       margin-left: auto;
     }
   }
 
-  .testimonial-form__label--contacts + input {
+  .testimonial-form__input--contacts {
     width: 320px;
   }
 
   .testimonial-form__desk-hidden {
     display: none;
+  }
+
+  .testimonial-form__group--checkbox {
+    padding: 0;
+  }
+
+  .testimonial-form__legend--checkbox {
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .testimonial-form__label--checkbox:nth-of-type(odd) {
+    margin-right: 0;
+  }
+
+  .testimonial-form__label--checkbox {
+    width: 210px;
+
+    &:not(:nth-of-type(4)) {
+      margin-right: 40px;
+    }
+  }
+
+  .testimonial-form__button {
+    width: 480px;
   }
 }

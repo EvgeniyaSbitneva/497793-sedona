@@ -19,7 +19,7 @@
   input[type="tel"],
   input[type="email"],
   textarea {
-    padding: 16px 20px;
+    padding: 13px 18px 12px;
 
     font-weight: bold;
     font-size: 18px;
@@ -28,7 +28,7 @@
     text-transform: none;
 
     background-color: @bg-form;
-    border: none;
+    border: 2px solid @bg-form;
   }
 
   textarea {
@@ -43,6 +43,8 @@
 }
 
 .testimonial-form__label {
+  position: relative;
+
   line-height: 26px;
 }
 
@@ -69,6 +71,10 @@
   &:first-of-type {
     width: 230px;
   }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .testimonial-form__legend,
@@ -80,19 +86,176 @@
   text-align: center;
 }
 
+.testimonial-form__label--name + input::placeholder,
+.testimonial-form__label--contacts + input::placeholder,
+.testimonial-form__label--textarea + textarea::placeholder {
+  font: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.testimonial-form__label--name + input:hover,
+.testimonial-form__label--contacts + input:hover,
+.testimonial-form__label--textarea + textarea:hover {
+  background-color: @bg-form-hover;
+  border-color: @bg-form-hover;
+}
+
+.testimonial-form__label--name + input:focus,
+.testimonial-form__label--contacts + input:focus,
+.testimonial-form__label--textarea + textarea:focus {
+  outline: none;
+  background-color: transparent;
+  border-color: @bg-form-hover;
+}
+
 .testimonial-form__label--radio,
 .testimonial-form__label--checkbox {
   padding: 15px 0 15px 80px;
+  margin-bottom: 15px;
 
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   color: @heading-dark;
   text-transform: none;
+
+  cursor: pointer;
+
+  :last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.testimonial-form__label--radio {
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 55px;
+    height: 55px;
+
+    background-color: @bg-form;
+    border-radius: 50%;
+  }
+}
+
+.testimonial-form__input--radio:hover + .testimonial-form__label--radio::before {
+  background-color: @bg-form-hover;
+}
+
+.testimonial-form__input--radio:active + .testimonial-form__label--radio::before {
+  background-color: @bg-form-active;
+}
+
+.testimonial-form__input--radio:checked + .testimonial-form__label--radio::after {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 18px;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: @text-color;
+  border-radius: 50%;
+}
+
+.testimonial-form__input--radio:checked:active + .testimonial-form__label--radio::after {
+  background-color: #a4a4a4;
+}
+
+.testimonial-form__label--checkbox {
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 57px;
+    height: 57px;
+
+    background-color: @bg-form;
+    border-radius: 5%;
+  }
+}
+
+.testimonial-form__input--checkbox:hover + .testimonial-form__label--checkbox::before {
+  background-color: @bg-form-hover;
+}
+
+.testimonial-form__input--checkbox:active + .testimonial-form__label--checkbox::before {
+  background-color: @bg-form-active;
+}
+
+.testimonial-form__input--checkbox:checked + .testimonial-form__label--checkbox::after {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 18px;
+
+  width: 24px;
+  height: 17px;
+
+  background: url("../../img/icon-tick.svg") center no-repeat;
+  background-size: contain;
+}
+
+.testimonial-form__input--checkbox:checked:active + .testimonial-form__label--checkbox::after {
+  opacity: 0.4;
+}
+
+.testimonial-form__label--textarea {
+  margin-bottom: 20px;
+}
+
+.testimonial-form__btn-wrap {
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 .testimonial-form__note {
   display: none;
+}
+
+@media (max-width: @mobile-only) {
+  .testimonial-form__group:not(:last-of-type) {
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+
+      width: 320px;
+      height: 1px;
+
+      background-color: #e5e5e5;
+    }
+
+    &:first-of-type::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: -20px;
+
+      width: 320px;
+      height: 1px;
+
+      background-color: #e5e5e5;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -135,13 +298,13 @@
     .testimonial-form__legend {
       text-align: left;
     }
-  }
 
-  .testimonial-form__label--name + input {
-    width: 178px;
+    input {
+      width: 178px;
 
-    &:first-of-type {
-      width: 216px;
+      &:first-of-type {
+        width: 216px;
+      }
     }
   }
 
@@ -186,15 +349,14 @@
 
   .testimonial-form__group--name,
   .testimonial-form__group--radio {
-    width: 400px;
+    width: 480px;
   }
 
   .testimonial-form__group--name {
-    margin-left: 160px;
-    padding-left: 0;
+    padding-left: 80px;
 
     input {
-      width: 312px;
+      width: 314px;
 
       &:first-of-type {
         width: 350px;

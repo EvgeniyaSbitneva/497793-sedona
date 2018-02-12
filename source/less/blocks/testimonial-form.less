@@ -149,6 +149,11 @@
   background-color: @bg-form-hover;
 }
 
+.testimonial-form__input--radio:focus + .testimonial-form__label--radio::before {
+  background-color: @bg-form-hover;
+  box-shadow: 0 0 0 1px @bg-blue;
+}
+
 .testimonial-form__input--radio:active + .testimonial-form__label--radio::before {
   background-color: @bg-form-active;
 }
@@ -191,6 +196,11 @@
   background-color: @bg-form-hover;
 }
 
+.testimonial-form__input--checkbox:focus + .testimonial-form__label--checkbox::before {
+  background-color: @bg-form-hover;
+  box-shadow: 0 0 0 1px @bg-blue;
+}
+
 .testimonial-form__input--checkbox:active + .testimonial-form__label--checkbox::before {
   background-color: @bg-form-active;
 }
@@ -205,7 +215,7 @@
   width: 24px;
   height: 17px;
 
-  background: url("../../img/icon-tick.svg") center no-repeat;
+  background: url("../img/icon-tick.svg") center no-repeat;
   background-size: contain;
 }
 
@@ -222,7 +232,8 @@
   margin-bottom: 50px;
 }
 
-.testimonial-form__note {
+.testimonial-form__note,
+.testimonial-form__legend--checkbox b {
   display: none;
 }
 
@@ -308,6 +319,10 @@
     }
   }
 
+  .testimonial-form__group--contacts {
+    margin-top: 45px;
+  }
+
   .testimonial-form__label--contacts + input {
     width: 100%;
   }
@@ -315,7 +330,7 @@
   .testimonial-form__group--checkbox {
     .reset-indents();
     width: 480px;
-    margin: 0 auto;
+    margin: 25px auto 0;
   }
 
   .testimonial-form__label--checkbox {
@@ -323,7 +338,8 @@
     margin-bottom: 30px;
   }
 
-  .testimonial-form__note {
+  .testimonial-form__note,
+  .testimonial-form__legend--checkbox b {
     display: block;
   }
 

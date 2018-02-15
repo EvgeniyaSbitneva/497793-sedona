@@ -221,6 +221,9 @@
   }
 
   .advanteges__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 256px;
     padding: 45px;
 
@@ -230,10 +233,17 @@
   }
 
   .advanteges__photo-wrap {
-    height: 256px;
+    display: flex;
+    height: auto;
+
+    picture {
+      display: flex;
+      align-items: center;
+    }
   }
 
   .advanteges__photo {
+    display: block;
     width: 512px;
   }
 }
@@ -245,10 +255,6 @@
   }
 
   .advanteges__wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     width: 400px;
     padding-bottom: 66px;
   }
@@ -256,8 +262,6 @@
   .advanteges__photo-wrap {
     width: 800px;
     height: 256px;
-
-    overflow: hidden;
   }
 
   .advanteges__photo {

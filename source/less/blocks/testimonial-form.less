@@ -18,8 +18,8 @@
   input[type="tel"],
   input[type="email"],
   textarea {
-    height: 55px;
-    padding: 13px 17px 12px;
+    height: 58px;
+    padding: 11px 20px 12px;
 
     font-weight: bold;
     font-size: 18px;
@@ -57,6 +57,7 @@
   display: inline-block;
   vertical-align: baseline;
   width: 80px;
+  margin-right: 5px;
 
   &:first-of-type {
     width: 40px;
@@ -72,8 +73,8 @@
 }
 
 .testimonial-form__label--contacts {
-  padding-left: 18px;
-  margin-bottom: 10px;
+  padding-left: 22px;
+  margin-bottom: 7px;
 }
 
 .testimonial-form__input--contacts {
@@ -82,7 +83,7 @@
   margin-bottom: 10px;
 
   &:last-of-type {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
   &::after {
@@ -92,8 +93,8 @@
     top: 0;
     right: 0;
 
-    width: 55px;
-    height: 55px;
+    width: 58px;
+    height: 58px;
   }
 }
 
@@ -109,7 +110,7 @@
   display: inline-block;
   vertical-align: baseline;
   width: 190px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 
   &:first-of-type {
     width: 230px;
@@ -123,7 +124,7 @@
 .testimonial-form__legend,
 .testimonial-form__label--textarea {
   margin-top: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   font-weight: bold;
   font-size: 18px;
@@ -161,7 +162,7 @@
 .testimonial-form__label--radio,
 .testimonial-form__label--checkbox {
   padding: 15px 0 15px 80px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
   font-weight: bold;
   font-size: 18px;
@@ -282,6 +283,10 @@
   margin-bottom: 40px;
 }
 
+.testimonial-form__legend--checkbox {
+  margin-bottom: 17px;
+}
+
 .testimonial-form__note,
 .testimonial-form__legend--checkbox b {
   display: none;
@@ -391,11 +396,13 @@
   }
 
   .testimonial-form__group--contacts {
-    margin-top: 32px;
+    margin-top: 25px;
   }
 
   .testimonial-form__legend--contacts {
     position: relative;
+
+    margin-bottom: 23px;
 
     &::before {
       content: "";
@@ -427,14 +434,14 @@
   .testimonial-form__legend--checkbox {
     position: relative;
 
-    margin-bottom: 40px;
+    margin-bottom: 42px;
 
     &::before {
       content: "";
 
       position: absolute;
       top: 50%;
-      left: -80px;
+      left: -75px;
 
       width: 125px;
       height: 1px;
@@ -447,7 +454,7 @@
 
       position: absolute;
       top: 50%;
-      right: -80px;
+      right: -75px;
 
       width: 125px;
       height: 1px;
@@ -458,31 +465,80 @@
 
   .testimonial-form__input--contacts {
     width: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 25px;
+
+    &:last-of-type {
+      margin-bottom: 35px;
+    }
+  }
+
+  .testimonial-form__label--name + input {
+    width: 175px;
   }
 
   .testimonial-form__group--checkbox {
     .reset-indents();
     width: 648px;
-    margin: 10px auto 0;
-    padding: 0 90px;
+    margin: 0 auto;
+    padding: 0 75px;
+
+    .testimonial-form__flex-wrap {
+      justify-content: space-between;
+      padding-left: 20px;
+    }
   }
 
   .testimonial-form__label--checkbox {
-    width: auto;
+    width: 225px;
     margin-bottom: 30px;
 
-    &:nth-of-type(odd) {
-      margin-right: 70px;
+    &:first-of-type {
+      order: -3;
+    }
+
+    &:nth-of-type(2) {
+      order: -1;
+    }
+
+    &:nth-of-type(3) {
+      order: -2;
     }
   }
 
   .testimonial-form__group--textarea {
-    margin-top: 25px;
+    margin-top: 20px;
   }
 
   .testimonial-form__label--textarea {
-    margin-bottom: 55px;
+    position: relative;
+
+    margin-bottom: 60px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 125px;
+      height: 1px;
+
+      background-color: @bg-form-active;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 125px;
+      height: 1px;
+
+      background-color: @bg-form-active;
+    }
   }
 
   .testimonial-form__note,
@@ -521,7 +577,7 @@
     padding-left: 80px;
 
     input {
-      width: 314px;
+      width: 310px;
 
       &:first-of-type {
         width: 350px;
@@ -536,11 +592,20 @@
   .testimonial-form__group--checkbox {
     width: 100%;
     padding: 0;
+
+    .testimonial-form__flex-wrap {
+      padding-left: 0;
+    }
   }
 
   .testimonial-form__legend--contacts {
-    margin-top: 12px;
+    margin-top: 15px;
     margin-bottom: 75px;
+
+    &::before,
+    &::after {
+      width: 280px;
+    }
   }
 
   .testimonial-form__label--contacts {
@@ -563,26 +628,43 @@
   .testimonial-form__legend--checkbox {
     &::before {
       left: 0;
+
+      width: 280px;
     }
 
     &::after {
       right: 0;
+
+      width: 280px;
     }
   }
 
-  .testimonial-form__label--checkbox:nth-of-type(odd) {
-    margin-right: 0;
+  .testimonial-form__flex-wrap {
+    justify-content: space-between;
   }
 
   .testimonial-form__label--checkbox {
-    width: 210px;
+    width: auto;
 
     &:not(:nth-of-type(4)) {
       margin-right: 40px;
     }
   }
 
+  .testimonial-form__label--textarea {
+    margin-top: 15px;
+
+    &::before,
+    &::after {
+      width: 280px;
+    }
+  }
+
   .testimonial-form__button {
     width: 480px;
+  }
+
+  .testimonial-form__btn-wrap {
+    margin-bottom: 65px;
   }
 }

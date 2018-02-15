@@ -25,7 +25,8 @@ gulp.task("style", function() {
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 gulp.task("images", function() {
@@ -65,7 +66,7 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("source/less/**/*.less", ["style"]);
-  gulp.watch("source/*.html", ["html"]);
+  gulp.watch("source/*.html", ["html"]).on("change", server.reload);
 });
 
 gulp.task("build", function (done) {

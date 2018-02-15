@@ -6,7 +6,7 @@
     <title>Седона: отправить отзыв</title>
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
-    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <script>
       // Picture element HTML5 shiv
@@ -68,11 +68,11 @@
           <div class="testimonial-form__legend testimonial-form__legend--contacts">Контактная информация:</div>
           <div class="testimonial-form__flex-wrap testimonial-form__flex-wrap--row">
             <label class="testimonial-form__label testimonial-form__label--contacts" for="user-phone"><span class="testimonial-form__desk-hidden">Контактный</span> телефон<sup>*</sup>:</label>
-            <div class="testimonial-form__input--contacts testimonial-form__input--contacts-tel">
+            <div class="testimonial-form__input testimonial-form__input--contacts testimonial-form__input--contacts-tel">
               <input type="tel" name="user-phone" placeholder="Введите телефон" id="user-phone" required>
             </div>
             <label class="testimonial-form__label testimonial-form__label--contacts" for="user-email">Электронная почта<sup>*</sup>:</label>
-            <div class="testimonial-form__input--contacts testimonial-form__input--contacts-mail">
+            <div class="testimonial-form__input testimonial-form__input--contacts testimonial-form__input--contacts-mail">
               <input type="email" name="user-email" placeholder="Введите e-mail" id="user-email" required>
             </div>
           </div>
@@ -80,24 +80,24 @@
         <fieldset class="testimonial-form__group testimonial-form__group--radio">
           <div class="testimonial-form__legend testimonial-form__legend--radio">Ваше общее впечатление:</div>
           <div class="testimonial-form__flex-wrap">
-            <input class="visually-hidden testimonial-form__input--radio" type="radio" name="filling" value="positive" id="radio-positive" checked>
+            <input class="visually-hidden testimonial-form__input testimonial-form__input--radio" type="radio" name="filling" value="positive" id="radio-positive" checked>
             <label class="testimonial-form__label testimonial-form__label--radio" for="radio-positive">Скорее положительное</label>
-            <input class="visually-hidden testimonial-form__input--radio" type="radio" name="filling" value="negative" id="radio-negative">
+            <input class="visually-hidden testimonial-form__input testimonial-form__input--radio" type="radio" name="filling" value="negative" id="radio-negative">
             <label class="testimonial-form__label testimonial-form__label--radio" for="radio-negative">Скорее отрицательное</label>
-            <input class="visually-hidden testimonial-form__input--radio" type="radio" name="filling" value="no-answer" id="radio-no-answer">
+            <input class="visually-hidden testimonial-form__input testimonial-form__input--radio" type="radio" name="filling" value="no-answer" id="radio-no-answer">
             <label class="testimonial-form__label testimonial-form__label--radio" for="radio-no-answer">Затрудняюсь ответить</label>
           </div>
         </fieldset>
         <fieldset class="testimonial-form__group testimonial-form__group--checkbox">
           <div class="testimonial-form__legend testimonial-form__legend--checkbox">Посещенные <br>достопримечательности:</div>
           <div class="testimonial-form__flex-wrap testimonial-form__flex-wrap--row">
-            <input class="visually-hidden testimonial-form__input--checkbox" type="checkbox" name="bridge" value="bridge" id="checkbox-bridge" checked>
+            <input class="visually-hidden testimonial-form__input testimonial-form__input--checkbox" type="checkbox" name="bridge" value="bridge" id="checkbox-bridge" checked>
             <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-bridge">Мост Дьявола</label>
-            <input class="visually-hidden testimonial-form__input--checkbox" type="checkbox" name="park" value="park" id="checkbox-park" checked>
+            <input class="visually-hidden testimonial-form__input testimonial-form__input--checkbox" type="checkbox" name="park" value="park" id="checkbox-park" checked>
             <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-park">Слайд-парк</label>
-            <input class="visually-hidden testimonial-form__input--checkbox" type="checkbox" name="mountain" value="mountain" id="checkbox-mountain">
+            <input class="visually-hidden testimonial-form__input testimonial-form__input--checkbox" type="checkbox" name="mountain" value="mountain" id="checkbox-mountain">
             <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-mountain">Гора-Колокол</label>
-            <input class="visually-hidden testimonial-form__input--checkbox" type="checkbox" name="red-rocks" value="red-rocks" id="checkbox-red-rocks" checked>
+            <input class="visually-hidden testimonial-form__input testimonial-form__input--checkbox" type="checkbox" name="red-rocks" value="red-rocks" id="checkbox-red-rocks" checked>
             <label class="testimonial-form__label testimonial-form__label--checkbox" for="checkbox-red-rocks">Красные скалы</label>
           </div>
         </fieldset>

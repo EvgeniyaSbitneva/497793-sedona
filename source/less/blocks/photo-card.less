@@ -1,6 +1,6 @@
 .photo-card {
   margin: 0 auto;
-  padding: 23px 0 16px;
+  padding: 23px 0 21px;
 
   text-align: left;
 }
@@ -19,6 +19,7 @@
 
 .photo-card__autor {
   .reset-indents();
+  margin-bottom: 6px;
 
   text-transform: none;
 }
@@ -74,13 +75,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 15px 20px 18px;
+    padding: 16px 20px;
 
     background-color: @bg-form;
   }
 
-  .photo-card__caption {
+  .photo-card__caption,
+  .photo-card__autor {
     .reset-indents();
   }
 }
@@ -117,6 +118,7 @@
     left: 0;
 
     width: 100%;
+    padding: 14px 20px 18px;
 
     color: @heading-white;
 
